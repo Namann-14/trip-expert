@@ -31,7 +31,8 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen mx-auto overflow-hidden">
+
       {/* Hero Section */}
       <section className="relative bg-[#FFCB45] py-20 overflow-hidden">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -54,15 +55,15 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="relative h-[400px] w-full">
-                <Image
-                  src="/placeholder.svg?height=400&width=500"
-                  alt="Travel planning interface"
-                  fill
-                  className="object-contain"
-                  priority
-                />
-              </div>
+              <div className="relative h-[400px] w-full flex justify-center items-center">
+              <Image src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=2000&auto=format&fit=crop"
+  alt="Travel planning interface"
+  width={300}
+  height={300}
+  className="rounded-full object-cover"
+  priority
+/>
+</div>
             </motion.div>
           </div>
         </div>
@@ -74,67 +75,67 @@ export default function Home() {
         />
       </section>
 
-      {/* How It Works */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold text-center mb-16"
-          >
-            How It Works
-          </motion.h2>
+{/* How It Works */}
+<section className="py-20 bg-white">
+  <div className="container mx-auto px-4 md:px-6">
+    <motion.h2
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="text-3xl md:text-4xl font-bold text-center mb-16"
+    >
+      How It Works
+    </motion.h2>
 
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-10"
-          >
-            <motion.div variants={fadeIn} className="flex flex-col items-center text-center">
-              <div className="relative h-48 w-48 mb-6">
-                <Image
-                  src="/placeholder.svg?height=200&width=200"
-                  alt="Start curating"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Start curating</h3>
-              <p className="text-gray-600">Discover destinations and save your favorite places to visit.</p>
-            </motion.div>
-
-            <motion.div variants={fadeIn} className="flex flex-col items-center text-center">
-              <div className="relative h-48 w-48 mb-6">
-                <Image
-                  src="/placeholder.svg?height=200&width=200"
-                  alt="Get personalized recommendations"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Get personalized recommendations</h3>
-              <p className="text-gray-600">Our AI suggests places based on your preferences and travel style.</p>
-            </motion.div>
-
-            <motion.div variants={fadeIn} className="flex flex-col items-center text-center">
-              <div className="relative h-48 w-48 mb-6">
-                <Image
-                  src="/placeholder.svg?height=200&width=200"
-                  alt="Guide with friends"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Guide with friends</h3>
-              <p className="text-gray-600">Collaborate with friends to plan the perfect trip together.</p>
-            </motion.div>
-          </motion.div>
+    <motion.div
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="grid grid-cols-1 md:grid-cols-3 gap-10"
+    >
+      <motion.div variants={fadeIn} className="flex flex-col items-center text-center">
+        <div className="relative h-48 w-48 mb-6">
+          <Image
+            src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=300&auto=format&fit=crop"
+            alt="Start curating"
+            fill
+            className="object-cover rounded-lg"
+          />
         </div>
-      </section>
+        <h3 className="text-xl font-semibold mb-3">Start curating</h3>
+        <p className="text-gray-600">Discover destinations and save your favorite places to visit.</p>
+      </motion.div>
+
+      <motion.div variants={fadeIn} className="flex flex-col items-center text-center">
+        <div className="relative h-48 w-48 mb-6">
+          <Image
+            src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=300&auto=format&fit=crop"
+            alt="Get personalized recommendations"
+            fill
+            className="object-cover rounded-lg"
+          />
+        </div>
+        <h3 className="text-xl font-semibold mb-3">Get personalized recommendations</h3>
+        <p className="text-gray-600">Our AI suggests places based on your preferences and travel style.</p>
+      </motion.div>
+
+      <motion.div variants={fadeIn} className="flex flex-col items-center text-center">
+        <div className="relative h-48 w-48 mb-6">
+          <Image
+            src="https://images.unsplash.com/photo-1527631120902-378417754324?q=80&w=300&auto=format&fit=crop"
+            alt="Guide with friends"
+            fill
+            className="object-cover rounded-lg"
+          />
+        </div>
+        <h3 className="text-xl font-semibold mb-3">Guide with friends</h3>
+        <p className="text-gray-600">Collaborate with friends to plan the perfect trip together.</p>
+      </motion.div>
+    </motion.div>
+  </div>
+</section>
 
       {/* Unravel Section */}
       <section className="py-20 bg-gray-50">
@@ -148,11 +149,11 @@ export default function Home() {
               className="relative h-[400px]"
             >
               <Image
-                src="/placeholder.svg?height=400&width=500"
-                alt="Travel itinerary planning"
-                fill
-                className="object-contain"
-              />
+  src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=2000&auto=format&fit=crop"
+  alt="Travel itinerary planning"
+  fill
+  className="object-cover rounded-lg"
+/>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -393,18 +394,27 @@ export default function Home() {
             viewport={{ once: true }}
             className="grid grid-cols-2 md:grid-cols-4 gap-4"
           >
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-              <motion.div
-                key={item}
-                variants={fadeIn}
-                className="relative overflow-hidden rounded-lg aspect-square group"
-              >
-                <Image
-                  src={`/placeholder.svg?height=300&width=300`}
-                  alt={`Travel inspiration ${item}`}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+           {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
+  <motion.div
+    key={item}
+    variants={fadeIn}
+    className="relative overflow-hidden rounded-lg aspect-square group"
+  >
+    <Image
+      src={[
+        "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=600", // Kyoto
+        "https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=600", // Bali
+        "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=600", // Paris
+        "https://images.unsplash.com/photo-1538970272646-f61fabb3a8a2?q=80&w=600", // New York
+        "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=600", // Tokyo
+        "https://images.unsplash.com/photo-1525874684015-58379d421a52?q=80&w=600", // Rome
+        "https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?q=80&w=600", // Barcelona
+        "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=600", // Sydney
+      ][item - 1]}
+      alt={`Travel inspiration ${item}`}
+      fill
+      className="object-cover transition-transform duration-500 group-hover:scale-110"
+    />
                 <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                   <Badge className="bg-white text-black hover:bg-gray-100">
                     {["Kyoto", "Bali", "Paris", "New York", "Tokyo", "Rome", "Barcelona", "Sydney"][item - 1]}
@@ -428,11 +438,11 @@ export default function Home() {
               className="relative h-[400px]"
             >
               <Image
-                src="/placeholder.svg?height=400&width=500"
-                alt="Travel styles"
-                fill
-                className="object-cover rounded-lg"
-              />
+  src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2000&auto=format&fit=crop"
+  alt="Travel styles"
+  fill
+  className="object-cover rounded-lg"
+/>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -495,14 +505,19 @@ export default function Home() {
             viewport={{ once: true }}
             className="grid grid-cols-2 md:grid-cols-4 gap-4"
           >
-            {[1, 2, 3, 4].map((item) => (
-              <motion.div key={item} variants={fadeIn} className="relative overflow-hidden rounded-lg aspect-square">
-                <Image
-                  src={`/placeholder.svg?height=300&width=300`}
-                  alt={`User travel photo ${item}`}
-                  fill
-                  className="object-cover"
-                />
+           {[1, 2, 3, 4].map((item) => (
+  <motion.div key={item} variants={fadeIn} className="relative overflow-hidden rounded-lg aspect-square">
+    <Image
+      src={[
+        "https://images.unsplash.com/photo-1527631746610-bca00a040d60?q=80&w=600",
+        "https://images.unsplash.com/photo-1500835556837-99ac94a94552?q=80&w=600",
+        "https://images.unsplash.com/photo-1534329539061-64caeb388c42?q=80&w=600",
+        "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=600"
+      ][item - 1]}
+      alt={`User travel photo ${item}`}
+      fill
+      className="object-cover"
+    />
                 <div className="absolute bottom-3 left-3">
                   <Badge className="bg-white text-black">@traveler{item}</Badge>
                 </div>
@@ -512,44 +527,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Partners */}
-      <section className="py-20 bg-gray-50 border-t border-gray-200">
-        <div className="container mx-auto px-4 md:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-2xl font-bold mb-2">Partner with Mindtrip</h2>
-            <p className="text-gray-600">Join our network of travel partners and reach millions of travelers</p>
-            <Button variant="outline" className="mt-4 border-black text-black hover:bg-gray-100">
-              Learn More
-            </Button>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-10"
-          >
-            <h3 className="text-center text-lg font-medium mb-8">As featured in</h3>
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-              {["TechCrunch", "Wired", "The New York Times", "Forbes", "PhoCusWright"].map((partner, index) => (
-                <div
-                  key={index}
-                  className="grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                >
-                  <Image src="/placeholder-logo.svg" alt={partner} width={120} height={40} className="object-contain" />
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-white border-t border-gray-200 py-12">
